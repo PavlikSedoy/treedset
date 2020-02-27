@@ -46,3 +46,7 @@ $z-indexes: (
     }
   }
 }
+
+@mixin cubic-first() {
+  transition: .5s cubic-bezier(.42,1.03,.22,1);
+}

@@ -1,0 +1,9 @@
+.sign-control-wr {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// import tabs
+@import "./sign-tabs/sign-tabs";

@@ -19,11 +19,14 @@
     padding: 15px;
     max-width: 420px;
     min-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   // Logo side
   &__logo-side {
-    background: 50% 50%/170% no-repeat url('../images/sign-in/bg-image.svg');
+    background: 50% 50%/cover no-repeat url('../images/sign-in/bg-image.svg');
     height: 100vh;
   }
 

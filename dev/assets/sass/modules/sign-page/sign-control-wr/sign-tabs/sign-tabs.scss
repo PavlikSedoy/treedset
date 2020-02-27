@@ -1,0 +1,66 @@
+.sign-tabs {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  &__link {
+    @include cubic-first;
+    flex-basis: 50%;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $signGrayColor;
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+
+    &:visited {
+      color: $signGrayColor;
+    }
+
+    &:first-child, &:focus, &:active {
+      color: $dark;
+    }
+  }
+
+  // Buttom line
+  &:before, &:after {
+    @include pseudo;
+    height: 2px;
+    border-radius: 2px;
+    bottom: -1px;
+    left: 0;
+  }
+
+  &:before {
+    width: 100%;
+    background: rgba($signGrayColor, .3);
+  }
+
+  // Active tab line
+  &:after {
+    @include cubic-first;
+    width: 50%;
+    background: $dark;
+  }
+
+  // Sign up active (on hover or sign up page)
+  &.signup-active {
+    .sign-tabs__link {
+      &:first-child {
+        color: $signGrayColor;
+      }
+      
+      &:last-child {
+        color: $dark;
+      }
+    }
+    
+    // Active tab line
+    &:after {
+      width: 50%;
+      background: $dark;
+      left: 50%;
+    }
+  }
+}
