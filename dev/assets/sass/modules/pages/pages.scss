@@ -1,0 +1,33 @@
+// Sign page
+.sign-page {
+  background: $signBgColor;
+
+  &__wrapper {
+    display: flex;
+
+    &>div {
+      flex-basis: 50%;
+    }
+  }
+  
+  // Logo side
+  &__logo-side {
+    background: 50% 50%/170% no-repeat url('../images/sign-in/bg-image.svg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    svg {
+      width: 235px;
+    }
+  }
+
+  // Form side
+  &__form-side {
+    background: $signFormSideBg;
+  }
+}
+// End sign page
