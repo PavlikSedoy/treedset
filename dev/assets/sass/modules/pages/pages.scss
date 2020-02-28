@@ -18,10 +18,11 @@
     width: 100%;
     padding: 15px;
     max-width: 420px;
-    min-height: calc(100vh - 200px);
+    height: calc(100vh - 200px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-height: 850px;
   }
   
   // Logo side
@@ -36,9 +37,16 @@
     }
   }
 
+  &__mobile-title {
+    display: none;
+  }
+
   // Form side
   &__form-side {
     background: $signFormSideBg;
+    height: 100vh;
+    overflow: auto;
+    padding: 50px 0;
   }
 }
 // End sign page

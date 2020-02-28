@@ -1,0 +1,67 @@
+.input-group {
+  label {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+
+  &__input-wr {
+    margin-top: 5px;
+
+    &.phone {
+      input {
+        padding-left: 120px;
+      }
+    }
+  }
+
+  input {
+    @include placeholder {
+      font-size: 13px;
+      line-height: 40px;
+    }
+    height: 40px;
+    font-size: 13px;
+    line-height: 40px;
+    padding: 0 10px;
+  }
+}
+
+// Phone code
+.phone-code {
+  width: 110px;
+
+  &__current-flag {
+    height: 15px;
+  }
+
+  &__current-arrow {
+    svg {
+      height: 6px;
+    }
+  }
+
+  &__current-code {
+    margin: 0 8px;
+    font-size: 13px;
+  }
+}
+
+// Hide/show password icon
+.hide-password {
+  width: 22px;
+  height: 22px;
+}
+
+// Check
+.df-inline-check {
+  &__check-wr {
+    width: 15px;
+    height: 15px;
+  }
+
+  label {
+    margin-left: 5px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

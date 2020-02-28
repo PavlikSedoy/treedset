@@ -1,0 +1,47 @@
+.sign-page {
+  &__wrapper {
+    flex-direction: column;
+
+    &:before {
+      @include pseudo;
+      left: 0;
+      top: 0;
+      height: 100px;
+      width: 100%;
+      background: $signBgColor;
+    }
+
+    & > div {
+      &:first-child {
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+      }
+
+      &:last-child {
+        flex-basis: auto;
+        height: auto;
+        padding-top: 100px;
+      }
+    }
+  }
+
+  &__logo {
+    svg {
+      height: 70px;
+    }
+  }
+
+  &__mobile-title {
+    display: block;
+    color: $white;
+    font-size: 30px;
+  }
+
+  &__container {
+    min-height: calc(100vh - 100px);
+  }
+}

@@ -1,0 +1,10 @@
+.btn {
+  height: 40px;
+
+  &__type {
+    &_first {
+      line-height: 40px;
+      font-size: 16px;
+    }
+  }
+}
