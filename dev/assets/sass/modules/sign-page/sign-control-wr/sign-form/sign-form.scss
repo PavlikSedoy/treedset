@@ -11,4 +11,27 @@
       margin-top: 0;
     }
   }
+
+  // Remeber and forgot
+  &__options {
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__forgot {
+    @include cubic-first;
+    font-weight: 500;
+    line-height: 19px;
+    color: $signGrayColor;
+
+    &:visited {
+      color: $signGrayColor;
+    }
+
+    &:hover, &:focus, &:active {
+      color: $dark;
+    }
+  }
 }

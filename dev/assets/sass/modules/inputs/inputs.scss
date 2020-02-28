@@ -3,6 +3,7 @@ $dfInputPlaceholderColor: rgba(#98A1B8, .3);
 $dfInputHeight: 50px;
 $dfInputBorderRadius: 15px;
 $dfInputShadow: 0px 10px 50px #DBE2EB;
+$dfActiveStateColor: green;
 
 .input-group {
   label {
@@ -126,3 +127,65 @@ $dfInputShadow: 0px 10px 50px #DBE2EB;
   }
 }
 // End hide password
+
+// Default checkbox
+$dfCheckSize: 20px;
+$dfCheckBorderRadius: 5px;
+
+.df-inline-check {
+  display: flex;
+  align-items: center;
+
+  &__check-wr {
+    position: relative;
+    width: $dfCheckSize;
+    height: $dfCheckSize;
+
+    input {
+      position: absolute;
+      opacity: .1;
+      width: 100%;
+      height: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__custom-check {
+    @include cubic-first;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $dfCheckBorderRadius;
+    border: 2px solid $dfInputPlaceholderColor;
+    background: $white;
+  }
+
+  label {
+    @include cubic-first;
+    display: block;
+    margin-left: 10px;
+    font-weight: 500;
+    line-height: 19px;
+    color: $signGrayColor;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    .df-inline-check__custom-check {
+      border-color: $dfActiveStateColor;
+    }
+
+    label {
+      color: $dark;
+    }
+  }
+}
+// End default checkbox

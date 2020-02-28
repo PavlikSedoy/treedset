@@ -22,6 +22,18 @@ form.sign-form.sign-control-wr__form(action="/")
             include ../../../assets/images/svg/show-password.svg
           .hide-password__hide-icon
             include ../../../assets/images/svg/hide-password.svg
+
+    //- Remeber? and forgot password
+    .sign-form__options
+      //- Check
+      .df-inline-check
+        .df-inline-check__check-wr
+          .df-inline-check__custom-check
+          input#signinRemember(type="checkbox", name="signinRemember")
+        label(for="signinRemember") Remember
+      //- End check
+
+      a.sign-form__forgot(href="/") Forgot your password?
     
   //- End inputs block
   button.btn.btn__type_first SIGN IN
