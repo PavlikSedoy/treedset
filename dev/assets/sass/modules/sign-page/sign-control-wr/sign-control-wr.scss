@@ -3,7 +3,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  &__form {
+    margin-top: 60px;
+  }
 }
 
 // import tabs
 @import "./sign-tabs/sign-tabs";
+
+// import form
+@import "./sign-form/sign-form";

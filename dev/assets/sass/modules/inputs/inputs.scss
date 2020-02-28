@@ -1,0 +1,128 @@
+$dfInputTitleColor: #383838;
+$dfInputPlaceholderColor: rgba(#98A1B8, .3);
+$dfInputHeight: 50px;
+$dfInputBorderRadius: 15px;
+$dfInputShadow: 0px 10px 50px #DBE2EB;
+
+.input-group {
+  label {
+    color: $dfInputTitleColor;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &__input-wr {
+    margin-top: 12px;
+    position: relative;
+
+    // Phone
+    &.phone {
+      input {
+        padding-left: 170px;
+      }
+    }
+  }
+
+  input {
+    @include placeholder {
+      color: $dfInputPlaceholderColor;
+    }
+    width: 100%;
+    height: $dfInputHeight;
+    background: $white;
+    border-radius: $dfInputBorderRadius;
+    border: none;
+    box-shadow: $dfInputShadow;
+    padding: 0 22px;
+  }
+
+  // Phone
+  &__phone-code {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  // Password
+  &__hide-password {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+  }
+}
+
+// Phone code
+.phone-code {
+  height: 100%;
+  width: 160px;
+  background: $white;
+  border-radius: $dfInputBorderRadius 0 0 $dfInputBorderRadius;
+  
+  &__current {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-flag {
+      height: 26px;
+    }
+
+    &-code {
+      margin: 0 20px 0 12px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:after {
+    @include pseudo;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $dfInputPlaceholderColor;
+    width: 2px;
+    height: 30px;
+    right: 1px;
+    border-radius: 3px;
+  }
+}
+// End phone code
+
+// Hide password
+.hide-password {
+  width: 32px;
+  height: 32px;
+
+  &__hide-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  &.hide-password {
+    .hide-password__hide-icon {
+      @include cubic-first;
+
+      &:first-child {
+        opacity: 0;
+      }
+
+      &:last-child {
+        opacity: 1;
+      }
+    }
+  }
+}
+// End hide password

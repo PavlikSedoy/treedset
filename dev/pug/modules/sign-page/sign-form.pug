@@ -1,2 +1,27 @@
-form.sign-form()
-  | sign form
+form.sign-form.sign-control-wr__form(action="/")
+  //- Inputs block
+  .sign-form__inputs
+    //- Input
+    .input-group.sign-form__input
+      label(for="signinPhone") Phone number
+      .input-group__input-wr.phone
+        input#signinPhone(type="text", inputmode="tel", placeholder="Enter your phone number", required)
+        .input-group__phone-code.phone-code
+          .phone-code__current
+            img.phone-code__current-flag(src="./assets/images/flags/israel-flag.jpg", alt="israel flag")
+            span.phone-code__current-code +972
+            .phone-code__current-arrow
+              include ../../../assets/images/svg/arrow-down.svg
+    //- Input
+    .input-group.sign-form__input
+      label(for="signinPassword") Password
+      .input-group__input-wr.password
+        input#signinPassword(type="text", placeholder="Enter your password", required)
+        .input-group__hide-password.hide-password
+          .hide-password__show-icon
+            include ../../../assets/images/svg/show-password.svg
+          .hide-password__hide-icon
+            include ../../../assets/images/svg/hide-password.svg
+    
+  //- End inputs block
+  button.btn.btn__type_first SIGN IN

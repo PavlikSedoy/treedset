@@ -1,0 +1,28 @@
+$dfBtnHeight: 50px;
+$dfBtnBorderRadius: 15px;
+
+// Colors
+$disactiveBtnBg: #98A1B8;
+
+.btn {
+  width: 100%;
+  height: $dfBtnHeight;
+  border-radius: $dfBtnBorderRadius;
+
+  &__type {
+    &_first {
+      border: none;
+      background: $disactiveBtnBg;
+      color: $white;
+      font-size: 18px;
+      text-transform: uppercase;
+      line-height: 50px;
+      text-align: center;
+      font-weight: 700;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
