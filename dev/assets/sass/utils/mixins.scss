@@ -47,6 +47,6 @@ $z-indexes: (
   }
 }
 
-@mixin cubic-first() {
-  transition: .5s cubic-bezier(.42,1.03,.22,1);
+@mixin cubic-first($delay: 0) {
+  transition: .5s cubic-bezier(.42,1.03,.22,1) #{$delay}s;
 }

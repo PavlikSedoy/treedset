@@ -61,7 +61,7 @@
                 <div class="input-group sign-form__input">
                   <label for="signinPhone">Phone number</label>
                   <div class="input-group__input-wr phone">
-                    <input id="signinPhone" type="text" inputmode="tel" placeholder="Enter your phone number" required>
+                    <input id="signinPhone" type="text" inputmode="tel" placeholder="Enter your phone number" value="45 567 6758" required>
                     <div class="input-group__phone-code phone-code">
                       <div class="phone-code__current"><img class="phone-code__current-flag" src="./assets/images/flags/israel-flag.jpg" alt="israel flag"><span class="phone-code__current-code">+972</span>
                         <div class="phone-code__current-arrow"><svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +76,6 @@
                 <div class="input-group sign-form__input">
                   <label for="signinPassword">Password</label>
                   <div class="input-group__input-wr password">
-                    <input id="signinPassword" type="text" placeholder="Enter your password" required>
                     <div class="input-group__hide-password hide-password">
                       <div class="hide-password__show-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M29.8507 14.7792C30.5404 15.4626 30.5404 16.5374 29.8507 17.2208C27.5904 19.4608 22.2402 24 16 24C9.75979 24 4.40958 19.4608 2.14926 17.2208C1.45963 16.5374 1.45963 15.4626 2.14926 14.7792C4.40958 12.5392 9.75979 8 16 8C22.2402 8 27.5904 12.5392 29.8507 14.7792Z" stroke="#98A1B8" stroke-width="2" stroke-linejoin="round"/>
@@ -92,19 +91,24 @@
 
                       </div>
                     </div>
+                    <input id="signinPassword" type="password" placeholder="Enter your password" value="password" required>
                   </div>
                 </div>
                 <div class="sign-form__options">
                   <div class="df-inline-check">
                     <div class="df-inline-check__check-wr">
-                      <div class="df-inline-check__custom-check"></div>
-                      <input id="signinRemember" type="checkbox" name="signinRemember">
+                      <input id="signinRemember" type="checkbox" name="signinRemember" checked>
+                      <div class="df-inline-check__custom-check"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.48241 10.1644L7.48047 14.1641L14.4813 6.16407" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                      </div>
                     </div>
                     <label for="signinRemember">Remember</label>
                   </div><a class="sign-form__forgot" href="/">Forgot your password?</a>
                 </div>
               </div>
-              <button class="btn btn__type_first sign-form__btn">SIGN IN</button>
+              <button class="btn btn__type_first sign-form__btn active">SIGN IN</button>
             </form>
           </div>
         </div>

@@ -1,39 +1,82 @@
-form.sign-form.sign-control-wr__form(action="/")
-  //- Inputs block
-  .sign-form__inputs
-    //- Input
-    .input-group.sign-form__input
-      label(for="signinPhone") Phone number
-      .input-group__input-wr.phone
-        input#signinPhone(type="text", inputmode="tel", placeholder="Enter your phone number", required)
-        .input-group__phone-code.phone-code
-          .phone-code__current
-            img.phone-code__current-flag(src="./assets/images/flags/israel-flag.jpg", alt="israel flag")
-            span.phone-code__current-code +972
-            .phone-code__current-arrow
-              include ../../../assets/images/svg/arrow-down.svg
-    //- Input
-    .input-group.sign-form__input
-      label(for="signinPassword") Password
-      .input-group__input-wr.password
-        input#signinPassword(type="text", placeholder="Enter your password", required)
-        .input-group__hide-password.hide-password
-          .hide-password__show-icon
-            include ../../../assets/images/svg/show-password.svg
-          .hide-password__hide-icon
-            include ../../../assets/images/svg/hide-password.svg
+if step == 'second'
+  form.sign-form.sign-control-wr__form(action="/")
+    //- Inputs block
+    .sign-form__inputs
+      //- Input
+      .input-group.sign-form__input
+        label(for="signinPhone") Phone number
+        .input-group__input-wr.phone
+          input#signinPhone(type="text", inputmode="tel", placeholder="Enter your phone number", value="45 567 6758", required)
+          .input-group__phone-code.phone-code
+            .phone-code__current
+              img.phone-code__current-flag(src="./assets/images/flags/israel-flag.jpg", alt="israel flag")
+              span.phone-code__current-code +972
+              .phone-code__current-arrow
+                include ../../../assets/images/svg/arrow-down.svg
+      //- Input
+      .input-group.sign-form__input
+        label(for="signinPassword") Password
+        .input-group__input-wr.password
+          .input-group__hide-password.hide-password
+            .hide-password__show-icon
+              include ../../../assets/images/svg/show-password.svg
+            .hide-password__hide-icon
+              include ../../../assets/images/svg/hide-password.svg
+          input#signinPassword(type="password", placeholder="Enter your password", value="password", required)
 
-    //- Remeber? and forgot password
-    .sign-form__options
-      //- Check
-      .df-inline-check
-        .df-inline-check__check-wr
-          .df-inline-check__custom-check
-          input#signinRemember(type="checkbox", name="signinRemember")
-        label(for="signinRemember") Remember
-      //- End check
+      //- Remeber? and forgot password
+      .sign-form__options
+        //- Check
+        .df-inline-check
+          .df-inline-check__check-wr
+            input#signinRemember(type="checkbox", name="signinRemember", checked)
+            .df-inline-check__custom-check
+              include ../../../assets/images/svg/check.svg
+          label(for="signinRemember") Remember
+        //- End check
 
-      a.sign-form__forgot(href="/") Forgot your password?
-    
-  //- End inputs block
-  button.btn.btn__type_first.sign-form__btn SIGN IN
+        a.sign-form__forgot(href="/") Forgot your password?
+      
+    //- End inputs block
+    button.btn.btn__type_first.sign-form__btn.active SIGN IN
+else
+  form.sign-form.sign-control-wr__form(action="/")
+    //- Inputs block
+    .sign-form__inputs
+      //- Input
+      .input-group.sign-form__input
+        label(for="signinPhone") Phone number
+        .input-group__input-wr.phone
+          input#signinPhone(type="text", inputmode="tel", placeholder="Enter your phone number", required)
+          .input-group__phone-code.phone-code
+            .phone-code__current
+              img.phone-code__current-flag(src="./assets/images/flags/israel-flag.jpg", alt="israel flag")
+              span.phone-code__current-code +972
+              .phone-code__current-arrow
+                include ../../../assets/images/svg/arrow-down.svg
+      //- Input
+      .input-group.sign-form__input
+        label(for="signinPassword") Password
+        .input-group__input-wr.password
+          .input-group__hide-password
+            .hide-password__show-icon
+              include ../../../assets/images/svg/show-password.svg
+            .hide-password__hide-icon
+              include ../../../assets/images/svg/hide-password.svg
+          input#signinPassword(type="text", placeholder="Enter your password", required)
+
+      //- Remeber? and forgot password
+      .sign-form__options
+        //- Check
+        .df-inline-check
+          .df-inline-check__check-wr
+            input#signinRemember(type="checkbox", name="signinRemember")
+            .df-inline-check__custom-check
+              include ../../../assets/images/svg/check.svg
+          label(for="signinRemember") Remember
+        //- End check
+
+        a.sign-form__forgot(href="/") Forgot your password?
+      
+    //- End inputs block
+    button.btn.btn__type_first.sign-form__btn SIGN IN

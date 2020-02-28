@@ -5,6 +5,7 @@ $dfBtnBorderRadius: 15px;
 $disactiveBtnBg: #98A1B8;
 
 .btn {
+  @include cubic-first;
   width: 100%;
   height: $dfBtnHeight;
   border-radius: $dfBtnBorderRadius;
@@ -19,6 +20,15 @@ $disactiveBtnBg: #98A1B8;
       line-height: 50px;
       text-align: center;
       font-weight: 700;
+
+      &.active {
+        background: $dfActiveStateColor;
+
+        &:hover {
+          background: darken($dfActiveStateColor, 10%);
+          cursor: pointer;
+        }
+      }
 
       &:hover {
         cursor: not-allowed;
