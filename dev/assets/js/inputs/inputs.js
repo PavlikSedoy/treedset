@@ -1,10 +1,12 @@
-const signinPhone = document.getElementById('signinPhone')
+const signinPhone = document.querySelectorAll('.phone-input')
 
 // Execute function adding spaces on blur
-signinPhone.addEventListener( 'blur', () => {
-  const signinPhoneVal = signinPhone.value
-  
-  signinPhone.value = phoneFormat(signinPhoneVal)
+signinPhone.forEach( el => {
+  el.addEventListener( 'blur', () => {
+    const signinPhoneVal = el.value
+    
+    el.value = phoneFormat(signinPhoneVal)
+  })
 })
 
 // Function who adding spaces in phone number

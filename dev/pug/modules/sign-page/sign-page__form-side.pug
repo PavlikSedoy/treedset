@@ -6,6 +6,7 @@
     //- Tabs and form
     .sing-page__form-control-wr.sign-control-wr
       //- Tabs
-      include ./sign-tabs
+      if signType == 'in'
+        include ./sign-tabs
       //- Form
       include ./sign-form
