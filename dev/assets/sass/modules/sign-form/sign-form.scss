@@ -10,6 +10,10 @@
     &:first-child {
       margin-top: 0;
     }
+
+    &-regphone {
+      margin-top: 40px;
+    }
   }
 
   // Remeber and forgot
@@ -33,5 +37,10 @@
     &:hover, &:focus, &:active {
       color: $dark;
     }
+  }
+
+  &__sign-instruction {
+    font-weight: 500;
+    font-size: 18px;
   }
 }

@@ -54,14 +54,15 @@
             <h1 class="sign-heading__title">Welcome to TreeDset! </h1>
             <p class="sign-heading__desc">Join to TreeDset and you will recieve the best tool to create magnificent garden design.</p>
           </div>
-          <div class="sing-page__form-control-wr sign-control-wr">
+          <div class="sign-page__form-control-wr sign-control-wr">
             <div class="sign-tabs signup-active" id="signTabs"><a class="sign-tabs__link" href="/signin.html" onmouseover="handleLogTabHover()" onmouseout="handleLogTabOut()">Sign in</a><a class="sign-tabs__link" href="/signup.html" onmouseover="handleRegTabHover()" onmouseout="handleRegTabOut()">Sign up</a></div>
-            <form class="sign-form sign-control-wr__form sign-form__type_forgot sign-control-wr__form-forgot" action="/">
+            <form class="sign-form sign-control-wr__form sign-control-wr__form-signup" action="/">
               <div class="sign-form__inputs">
-                <div class="input-group sign-form__input undefined">
-                  <label for="forgotPhone">Phone number</label>
+                <p class="sign-form__sign-instruction">Enter your phone number to verify your account.</p>
+                <div class="input-group sign-form__input sign-form__input-regphone undefined">
+                  <label for="signupPhone">Phone number</label>
                   <div class="input-group__input-wr phone">
-                    <input class="phone-input" id="forgotPhone" type="text" inputmode="tel" placeholder="Enter your phone number" value="undefined" required>
+                    <input class="phone-input" id="signupPhone" type="text" inputmode="tel" placeholder="Enter your phone number" value="" required>
                     <div class="input-group__phone-code phone-code">
                       <div class="phone-code__current">
                         <div class="phone-code__current-flag"><svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -84,14 +85,8 @@
                     </div>
                   </div><span class="input-group__error-msg">Your phone number does not match</span>
                 </div>
-                <div class="input-group sign-form__input undefined">
-                  <label for="forgotEmail">Email</label>
-                  <div class="input-group__input-wr">
-                    <input id="forgotEmail" type="text" placeholder="Enter your emqil" inputmode="email" required>
-                  </div><span class="input-group__error-msg">Your password does not match</span>
-                </div>
               </div>
-              <button class="btn btn__type_first sign-form__btn undefined">SEND</button>
+              <button class="btn btn__type_first sign-form__btn ">SIGN UP</button>
             </form>
           </div>
         </div>
