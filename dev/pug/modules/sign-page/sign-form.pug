@@ -24,7 +24,7 @@ if signType == 'in'
     - var passwordVal = '45Abra90'
     - var buttonStatus = ''
     - var inputError = 'error'
-else if signType = 'forgot'
+else if signType == 'forgot'
   if step == 'first'
     - var phoneNumber = ''
     - var buttonStatus = ''
@@ -84,7 +84,7 @@ if signType == 'in'
       
     //- End inputs block
     button(class="btn btn__type_first sign-form__btn " + buttonStatus) SIGN IN
-else if signTye = 'forgot'
+else if signType = 'forgot'
   form.sign-form.sign-control-wr__form.sign-form__type_forgot.sign-control-wr__form-forgot(action="/")
     //- Inputs block
     .sign-form__inputs
@@ -110,3 +110,29 @@ else if signTye = 'forgot'
       
     //- End inputs block
     button(class="btn btn__type_first sign-form__btn " + buttonStatus) SEND
+//- else if signType = 'up'
+//-   .sign-form.sign-control-wr__form.sign-form__type_forgot.sign-control-wr__form-forgot(action="/")
+//-     //- Inputs block
+//-     .sign-form__inputs
+//-       //- Input
+//-       div(class="input-group sign-form__input " + inputError)
+//-         label(for="forgotPhone") Phone number
+//-         .input-group__input-wr.phone
+//-           input#forgotPhone.phone-input(type="text", inputmode="tel", placeholder="Enter your phone number", value= `${phoneNumber}`, required)
+//-           .input-group__phone-code.phone-code
+//-             .phone-code__current
+//-               .phone-code__current-flag
+//-                 include ../../../assets/images/svg/flags/israel-flag.svg
+//-               span.phone-code__current-code +972
+//-               .phone-code__current-arrow
+//-                 include ../../../assets/images/svg/arrow-down.svg
+//-         span.input-group__error-msg Your phone number does not match
+//-       //- Input
+//-       div(class="input-group sign-form__input " + inputError)
+//-         label(for="forgotEmail") Email
+//-         .input-group__input-wr
+//-           input#forgotEmail(type='text', placeholder="Enter your emqil", inputmode="email", value=emailVal, required)
+//-         span.input-group__error-msg Your password does not match
+      
+//-     //- End inputs block
+//-     button(class="btn btn__type_first sign-form__btn " + buttonStatus) SEND
