@@ -16,16 +16,16 @@
 // Media by width
 @media screen and (max-width: 991px) {
   @import "pages/pages-to-768.scss";
-  @import "sign-page/sign-control-wr/sign-control-wr-to-768";
-  @import "sign-page/sign-control-wr/sign-form/sign-form-to-768";
+  @import "sign-control-wr/sign-control-wr-to-768";
+  @import "sign-form/sign-form-to-768";
 }
 
 @media screen and (max-width: 575px) {
   @import "pages/pages-to-320";
-  @import "sign-page/sign-heading/sign-heading-to-320";
-  @import "sign-page/sign-control-wr/sign-tabs/sign-tabs-to-320";
-  @import "sign-page/sign-control-wr/sign-control-wr-to-320";
-  @import "sign-page/sign-control-wr/sign-form/sign-form-to-320";
+  @import "sign-heading/sign-heading-to-320";
+  @import "sign-tabs/sign-tabs-to-320";
+  @import "sign-control-wr/sign-control-wr-to-320";
+  @import "sign-form/sign-form-to-320";
   @import "inputs/inputs-to-320";
   @import "buttons/buttons-to-320";
 }

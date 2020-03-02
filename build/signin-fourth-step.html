@@ -58,10 +58,10 @@
             <div class="sign-tabs" id="signTabs"><a class="sign-tabs__link" href="/signin.html">Sign in</a><a class="sign-tabs__link" href="/signup.html" onmouseover="handleRegTabHover()" onmouseout="handleRegTabOut()">Sign up</a></div>
             <form class="sign-form sign-control-wr__form" action="/">
               <div class="sign-form__inputs">
-                <div class="input-group sign-form__input undefined">
+                <div class="input-group sign-form__input error">
                   <label for="signinPhone">Phone number</label>
                   <div class="input-group__input-wr phone">
-                    <input id="signinPhone" type="text" inputmode="tel" placeholder="Enter your phone number" value="" required>
+                    <input id="signinPhone" type="text" inputmode="tel" placeholder="Enter your phone number" value="45 567" required>
                     <div class="input-group__phone-code phone-code">
                       <div class="phone-code__current">
                         <div class="phone-code__current-flag"><svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -84,7 +84,7 @@
                     </div>
                   </div><span class="input-group__error-msg">Enter correct phone number</span>
                 </div>
-                <div class="input-group sign-form__input undefined">
+                <div class="input-group sign-form__input error">
                   <label for="signinPassword">Password</label>
                   <div class="input-group__input-wr password">
                     <div class="input-group__hide-password ">
@@ -102,7 +102,7 @@
 
                       </div>
                     </div>
-                    <input id="signinPassword" type="text" placeholder="Enter your password" value="" required>
+                    <input id="signinPassword" type="text" placeholder="Enter your password" value="45Abra90" required>
                   </div><span class="input-group__error-msg">Wrong password</span>
                 </div>
                 <div class="sign-form__options">

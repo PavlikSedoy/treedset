@@ -5,12 +5,12 @@
   justify-content: space-between;
 
   &__form {
-    margin-top: 60px;
+    margin-top: 75px;
   }
 }
 
 // import tabs
-@import "./sign-tabs/sign-tabs";
+@import "../sign-tabs/sign-tabs";
 
 // import form
-@import "./sign-form/sign-form";
+@import "../sign-form/sign-form";
