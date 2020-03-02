@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Treedset Sign in</title><!--[if IE]>
+    <title>Treedset Sign up</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
@@ -12,7 +12,7 @@
   <body class="sign-page">
     <div class="sign-page__wrapper">
       <div class="sign-page__logo-side">
-        <h1 class="sign-page__mobile-title">Welcome to TreeDset!</h1>
+        <h1 class="sign-page__mobile-title">Treedset Sign up</h1>
         <div class="sign-page__logo"><svg width="236" height="333" viewBox="0 0 236 333" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
 <path d="M12.5152 332.647C11.5775 332.647 10.8173 331.887 10.8173 330.95V300.278H1.05136C0.113666 300.278 -0.646484 299.518 -0.646484 298.581V294.209C-0.646484 293.273 0.113665 292.512 1.05136 292.512H28.733C29.6707 292.512 30.4309 293.273 30.4309 294.209V298.581C30.4309 299.518 29.6707 300.278 28.733 300.278H18.967V330.95C18.967 331.887 18.2069 332.647 17.2692 332.647H12.5152Z" fill="white"/>
@@ -51,17 +51,17 @@
       <div class="sign-page__form-side">
         <div class="sign-page__container">
           <div class="sign-heading">
-            <h1 class="sign-heading__title">Welcome to TreeDset!</h1>
-            <p class="sign-heading__desc">Thank you for get back to TreeDset, together we can create magnificent garden design.</p>
+            <h1 class="sign-heading__title">Welcome to TreeDset! </h1>
+            <p class="sign-heading__desc">Join to TreeDset and you will recieve the best tool to create magnificent garden design.</p>
           </div>
           <div class="sing-page__form-control-wr sign-control-wr">
-            <div class="sign-tabs" id="signTabs"><a class="sign-tabs__link" href="/signin.html" onmouseover="handleLogTabHover()" onmouseout="handleLogTabOut()">Sign in</a><a class="sign-tabs__link" href="/signup.html" onmouseover="handleRegTabHover()" onmouseout="handleRegTabOut()">Sign up</a></div>
-            <form class="sign-form sign-control-wr__form" action="/">
+            <div class="sign-tabs signup-active" id="signTabs"><a class="sign-tabs__link" href="/signin.html" onmouseover="handleLogTabHover()" onmouseout="handleLogTabOut()">Sign in</a><a class="sign-tabs__link" href="/signup.html" onmouseover="handleRegTabHover()" onmouseout="handleRegTabOut()">Sign up</a></div>
+            <form class="sign-form sign-control-wr__form sign-form__type_forgot sign-control-wr__form-forgot" action="/">
               <div class="sign-form__inputs">
                 <div class="input-group sign-form__input undefined">
-                  <label for="signinPhone">Phone number</label>
+                  <label for="forgotPhone">Phone number</label>
                   <div class="input-group__input-wr phone">
-                    <input class="phone-input" id="signinPhone" type="text" inputmode="tel" placeholder="Enter your phone number" value="45 567 6758" required>
+                    <input class="phone-input" id="forgotPhone" type="text" inputmode="tel" placeholder="Enter your phone number" value="" required>
                     <div class="input-group__phone-code phone-code">
                       <div class="phone-code__current">
                         <div class="phone-code__current-flag"><svg width="36" height="26" viewBox="0 0 36 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -82,44 +82,16 @@
                         </div>
                       </div>
                     </div>
-                  </div><span class="input-group__error-msg">Enter correct phone number</span>
+                  </div><span class="input-group__error-msg">Your phone number does not match</span>
                 </div>
                 <div class="input-group sign-form__input undefined">
-                  <label for="signinPassword">Password</label>
-                  <div class="input-group__input-wr password">
-                    <div class="input-group__hide-password ">
-                      <div class="hide-password__show-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M29.8507 14.7792C30.5404 15.4626 30.5404 16.5374 29.8507 17.2208C27.5904 19.4608 22.2402 24 16 24C9.75979 24 4.40958 19.4608 2.14926 17.2208C1.45963 16.5374 1.45963 15.4626 2.14926 14.7792C4.40958 12.5392 9.75979 8 16 8C22.2402 8 27.5904 12.5392 29.8507 14.7792Z" stroke="#98A1B8" stroke-width="2" stroke-linejoin="round"/>
-<circle cx="16" cy="16" r="4" stroke="#98A1B8" stroke-width="2"/>
-</svg>
-
-                      </div>
-                      <div class="hide-password__hide-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M29.8507 17.2208L30.5547 17.9311V17.9311L29.8507 17.2208ZM2.14926 14.7792L2.85317 15.4895L2.85317 15.4895L2.14926 14.7792ZM29.8499 14.7784L30.5538 14.0681L29.8499 14.7784ZM19.0312 9.37232C19.5681 9.50181 20.1083 9.17155 20.2378 8.63467C20.3673 8.09778 20.037 7.55757 19.5002 7.42807L19.0312 9.37232ZM5.80583 21.5127C6.26448 21.8203 6.8857 21.6979 7.19337 21.2393C7.50103 20.7806 7.37864 20.1594 6.91999 19.8517L5.80583 21.5127ZM2.14996 17.2215L1.44607 17.9318H1.44607L2.14996 17.2215ZM29.1468 16.5105C28.052 17.5955 26.215 19.2302 23.91 20.5889C21.601 21.9501 18.8805 23 16 23V25C19.3597 25 22.4345 23.7803 24.9256 22.3119C27.4209 20.841 29.3892 19.0861 30.5547 17.9311L29.1468 16.5105ZM2.85317 15.4895C3.94801 14.4045 5.78504 12.7698 8.08998 11.4111C10.399 10.0499 13.1195 9 16 9V7C12.6403 7 9.56554 8.21965 7.07436 9.68813C4.57906 11.159 2.61083 12.9139 1.44535 14.0689L2.85317 15.4895ZM21.9956 10.4098C25.1876 11.8661 27.7557 14.111 29.1461 15.4887L30.5538 14.0681C29.0847 12.6123 26.3224 10.1855 22.8257 8.59021L21.9956 10.4098ZM16 23C13.8522 23 11.7917 22.4165 9.91954 21.5512L9.08046 23.3667C11.1413 24.3192 13.4904 25 16 25V23ZM16 9C17.0341 9 18.048 9.13518 19.0312 9.37232L19.5002 7.42807C18.3808 7.15809 17.209 7 16 7V9ZM6.91999 19.8517C5.16104 18.6718 3.7545 17.4037 2.85384 16.5112L1.44607 17.9318C2.40807 18.8851 3.91267 20.2427 5.80583 21.5127L6.91999 19.8517ZM1.44535 14.0689C0.360421 15.1441 0.362106 16.8576 1.44607 17.9318L2.85384 16.5112C2.5585 16.2185 2.55884 15.7812 2.85317 15.4895L1.44535 14.0689ZM30.5547 17.9311C31.6396 16.8558 31.6377 15.1422 30.5538 14.0681L29.1461 15.4887C29.4415 15.7815 29.4411 16.2189 29.1468 16.5105L30.5547 17.9311Z" fill="#98A1B8"/>
-<path d="M19.6049 12.5352C19.2222 12.1371 18.5891 12.1246 18.191 12.5074C17.7928 12.8901 17.7804 13.5231 18.1631 13.9213L19.6049 12.5352ZM11.0281 16.5324C11.0864 17.0816 11.5788 17.4796 12.128 17.4213C12.6772 17.363 13.0752 16.8706 13.0169 16.3214L11.0281 16.5324ZM16.253 13.0105C16.8034 13.0562 17.2866 12.6471 17.3324 12.0967C17.3781 11.5464 16.9691 11.0631 16.4187 11.0173L16.253 13.0105ZM19 16C19 17.6569 17.6569 19 16 19V21C18.7614 21 21 18.7614 21 16H19ZM13 16C13 14.3431 14.3431 13 16 13V11C13.2386 11 11 13.2386 11 16H13ZM16 19C15.1224 19 14.3339 18.6244 13.7839 18.0222L12.3071 19.3708C13.22 20.3706 14.5372 21 16 21V19ZM18.1631 13.9213C18.6824 14.4614 19 15.1926 19 16H21C21 14.6554 20.4679 13.433 19.6049 12.5352L18.1631 13.9213ZM13.0169 16.3214C13.0058 16.2161 13 16.1089 13 16H11C11 16.1795 11.0095 16.3571 11.0281 16.5324L13.0169 16.3214ZM16 13C16.0854 13 16.1698 13.0035 16.253 13.0105L16.4187 11.0173C16.2804 11.0058 16.1408 11 16 11V13Z" fill="#98A1B8"/>
-<rect x="26.6064" y="4.68629" width="1" height="31" rx="0.5" transform="rotate(45 26.6064 4.68629)" fill="#98A1B8" stroke="#98A1B8"/>
-</svg>
-
-                      </div>
-                    </div>
-                    <input id="signinPassword" type="text" placeholder="Enter your password" value="45Abra90" required>
-                  </div><span class="input-group__error-msg">Wrong password</span>
-                </div>
-                <div class="sign-form__options">
-                  <div class="df-inline-check">
-                    <div class="df-inline-check__check-wr">
-                      <input id="signinRemember" type="checkbox" name="signinRemember" checked>
-                      <div class="df-inline-check__custom-check"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.48241 10.1644L7.48047 14.1641L14.4813 6.16407" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                      </div>
-                    </div>
-                    <label for="signinRemember">Remember</label>
-                  </div><a class="sign-form__forgot" href="/">Forgot your password?</a>
+                  <label for="forgotEmail">Email</label>
+                  <div class="input-group__input-wr">
+                    <input id="forgotEmail" type="text" placeholder="Enter your emqil" inputmode="email" value="" required>
+                  </div><span class="input-group__error-msg">Your password does not match</span>
                 </div>
               </div>
-              <button class="btn btn__type_first sign-form__btn active">SIGN IN</button>
+              <button class="btn btn__type_first sign-form__btn ">SEND</button>
             </form>
           </div>
         </div>

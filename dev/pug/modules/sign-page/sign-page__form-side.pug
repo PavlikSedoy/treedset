@@ -8,15 +8,17 @@ else
     //- Heading
     include ./sign-heading
     
-    if signType !== 'check'
+    if signType == 'check'
+      p.sign-page__check-info We have send on your email <b>sarahconer@gmail.com</b> new password
+
+      a.btn.btn__type_first.sign-form__btn.active(href="/signin.html") SIGN IN
+    else
       //- Tabs and form
       .sing-page__form-control-wr.sign-control-wr
         //- Tabs
         if signType == 'in'
           include ./sign-tabs
+        else if signType == 'up'
+          include ./sign-tabs
         //- Form
         include ./sign-form
-    else
-      p.sign-page__check-info We have send on your email <b>sarahconer@gmail.com</b> new password
-
-      a.btn.btn__type_first.sign-form__btn.active(href="/signin.html") SIGN IN
