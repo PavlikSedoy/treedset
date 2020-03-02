@@ -1,12 +1,22 @@
+if signType == 'check'
+  - var containerClass = ' check'
+else
+  - var containerClass = ''
+
 .sign-page__form-side
-  .sign-page__container
+  div(class='sign-page__container' + containerClass)
     //- Heading
     include ./sign-heading
     
-    //- Tabs and form
-    .sing-page__form-control-wr.sign-control-wr
-      //- Tabs
-      if signType == 'in'
-        include ./sign-tabs
-      //- Form
-      include ./sign-form
+    if signType !== 'check'
+      //- Tabs and form
+      .sing-page__form-control-wr.sign-control-wr
+        //- Tabs
+        if signType == 'in'
+          include ./sign-tabs
+        //- Form
+        include ./sign-form
+    else
+      p.sign-page__check-info We have send on your email <b>sarahconer@gmail.com</b> new password
+
+      a.btn.btn__type_first.sign-form__btn.active(href="/signin.html") SIGN IN

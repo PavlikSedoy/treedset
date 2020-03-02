@@ -1,4 +1,11 @@
+if signType == 'in'
+  - var title = 'Welcome to TreeDset!'
+if signType == 'forgot'
+  - var title = 'Forgot password?'
+if signType == 'check'
+  - var title = 'Check your email'
+
 .sign-page__logo-side
-  h1.sign-page__mobile-title Welcome to TreeDset!
+  h1.sign-page__mobile-title= title
   .sign-page__logo
     include ../../../assets/images/svg/treedset-logo.svg

@@ -4,7 +4,11 @@ if signType == 'in'
 else if signType == 'forgot'
   - var title = 'Forgot password?'
   - var description = 'It happens, don’t worry. Enter your email and phone number associated with your account.'
+else if signType = 'check'
+  - var title = 'Check your email'
+  - var description = ''
 
 .sign-heading
   h1.sign-heading__title= title
-  p.sign-heading__desc= description
+  if description !== ''
+    p.sign-heading__desc= description

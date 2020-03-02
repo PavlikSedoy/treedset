@@ -24,6 +24,12 @@
     line-height: 40px;
     padding: 0 10px;
   }
+
+  &__error-msg {
+    font-size: 12px;
+    line-height: 15px;
+    bottom: -20px;
+  }
 }
 
 // Phone code
