@@ -62,12 +62,32 @@ else if signType == 'digital-code'
     - var code3 = ''
     - var code4 = ''
     - var digitalError = ''
+    - var digitalErrorMsg = 'You have entered wrong code, try again'
+    - var buttonStatus = ''
   else if step == 'second'
     - var code1 = '4'
     - var code2 = '5'
     - var code3 = '6'
     - var code4 = '7'
     - var digitalError = ' error'
+    - var digitalErrorMsg = 'You have entered wrong code, try again'
+    - var buttonStatus = ''
+  else if step == 'third'
+    - var code1 = '4'
+    - var code2 = '5'
+    - var code3 = '6'
+    - var code4 = '7'
+    - var digitalError = ' error'
+    - var digitalErrorMsg = 'You have used all attempts to register. Try again after a while'
+    - var buttonStatus = ''
+  else if step == 'fourth'
+    - var code1 = '4'
+    - var code2 = '5'
+    - var code3 = '6'
+    - var code4 = '7'
+    - var digitalError = ''
+    - var digitalErrorMsg = 'You have used all attempts to register. Try again after a while'
+    - var buttonStatus = 'active'
 
 
 if signType == 'in'
@@ -174,7 +194,7 @@ else if signType == 'digital-code'
       div(class="input-group input-group__code" + digitalError)
         input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1', value=`${code4}`,required)
       //- Error message
-      p.digital-code__error-msg You have entered wrong code, try again
+      p.digital-code__error-msg= digitalErrorMsg
     p.digital-code__resend You did not receive a code?
       a.digital-code__resend-link(href='/')  Resend
 

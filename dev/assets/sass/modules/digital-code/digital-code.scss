@@ -54,7 +54,7 @@
     font-size: 14px;
     line-height: 17px;
     position: absolute;
-    bottom: -27px;
+    top: calc(100% + 10px);
     left: 0;
     color: $dfInputErrorColor;
     opacity: 0;

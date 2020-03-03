@@ -58,20 +58,20 @@
             <div class="sign-tabs signup-active" id="signTabs"><a class="sign-tabs__link" href="/signin.html" onmouseover="handleLogTabHover()" onmouseout="handleLogTabOut()">Sign in</a><a class="sign-tabs__link" href="/signup.html" onmouseover="handleRegTabHover()" onmouseout="handleRegTabOut()">Sign up</a></div>
             <div class="digital-code sign-control-wr__digital-code">
               <p class="digital-code__desc">Enter the 4 digit code sent to your mobile<br> number <span>+972 45 567 6758</span></p>
-              <div class="digital-code__code">
-                <div class="input-group input-group__code">
-                  <input class="phone-input" type="text" inputmode="numeric" pattern="d*" maxlength="1" value="" required>
+              <div class="digital-code__code error">
+                <div class="input-group input-group__code error">
+                  <input class="phone-input" type="text" inputmode="numeric" pattern="d*" maxlength="1" value="4" required>
                 </div>
-                <div class="input-group input-group__code">
-                  <input class="phone-input" type="text" inputmode="numeric" pattern="d*" maxlength="1" value="" required>
+                <div class="input-group input-group__code error">
+                  <input class="phone-input" type="text" inputmode="numeric" pattern="d*" maxlength="1" value="5" required>
                 </div>
-                <div class="input-group input-group__code">
-                  <input class="phone-input" type="text" inputmode="numeric" pattern="d*" maxlength="1" value="" required>
+                <div class="input-group input-group__code error">
+                  <input class="phone-input" type="text" inputmode="numeric" pattern="d*" maxlength="1" value="6" required>
                 </div>
-                <div class="input-group input-group__code">
-                  <input class="phone-input" type="text" inputmode="numeric" pattern="d*" maxlength="1" value="" required>
+                <div class="input-group input-group__code error">
+                  <input class="phone-input" type="text" inputmode="numeric" pattern="d*" maxlength="1" value="7" required>
                 </div>
-                <p class="digital-code__error-msg">You have entered wrong code, try again</p>
+                <p class="digital-code__error-msg">You have used all attempts to register. Try again after a while</p>
               </div>
               <p class="digital-code__resend">You did not receive a code?<a class="digital-code__resend-link" href="/"> Resend</a></p>
               <button class="btn btn__type_first sign-form__btn ">CONTINUE</button>
