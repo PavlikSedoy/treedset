@@ -55,6 +55,19 @@ else if signType == 'forgot'
     - var buttonStatus = ''
     - var emailVal = 'sarahconer@gmail.com'
     - var inputError = 'error'
+else if signType == 'digital-code'
+  if step == 'first'
+    - var code1 = ''
+    - var code2 = ''
+    - var code3 = ''
+    - var code4 = ''
+    - var digitalError = ''
+  else if step == 'second'
+    - var code1 = '4'
+    - var code2 = '5'
+    - var code3 = '6'
+    - var code4 = '7'
+    - var digitalError = ' error'
 
 
 if signType == 'in'
@@ -151,15 +164,17 @@ else if signType == 'up'
 else if signType == 'digital-code'
   .digital-code.sign-control-wr__digital-code
     p.digital-code__desc Enter the 4 digit code sent to your mobile<br> number <span>+972 45 567 6758</span>
-    .digital-code__code
-      .input-group.input-group__code
-          input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1', required)
-      .input-group.input-group__code
-          input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1',required)
-      .input-group.input-group__code
-          input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1',required)
-      .input-group.input-group__code
-          input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1',required)
+    div(class="digital-code__code" + digitalError)
+      div(class="input-group input-group__code" + digitalError)
+        input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1', value=`${code1}`, required)
+      div(class="input-group input-group__code" + digitalError)
+        input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1', value=`${code2}`,required)
+      div(class="input-group input-group__code" + digitalError)
+        input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1', value=`${code3}`,required)
+      div(class="input-group input-group__code" + digitalError)
+        input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1', value=`${code4}`,required)
+      //- Error message
+      p.digital-code__error-msg You have entered wrong code, try again
     p.digital-code__resend You did not receive a code?
       a.digital-code__resend-link(href='/')  Resend
 

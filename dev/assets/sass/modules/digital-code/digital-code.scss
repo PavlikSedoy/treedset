@@ -16,6 +16,7 @@
   &__code {
     display: flex;
     margin-top: 50px;
+    position: relative;
 
     & > div {
       margin: 0 15px;
@@ -26,6 +27,12 @@
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+
+    &.error {
+      .digital-code__error-msg {
+        opacity: 1;
       }
     }
   }
@@ -40,5 +47,16 @@
     &-link {
       color: $dfColor;
     }
+  }
+
+  &__error-msg {
+    @include cubic-first;
+    font-size: 14px;
+    line-height: 17px;
+    position: absolute;
+    bottom: -27px;
+    left: 0;
+    color: $dfInputErrorColor;
+    opacity: 0;
   }
 }

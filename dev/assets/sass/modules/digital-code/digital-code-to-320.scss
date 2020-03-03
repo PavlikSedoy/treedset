@@ -1,9 +1,23 @@
 .digital-code {
   &__desc {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 21px;
   }
 
   &__code {
     margin-top: 30px;
+
+    & > div {
+      margin: 0 10px;
+    }
+  }
+
+  &__error-msg {
+    font-size: 12px;
+  }
+
+  &__resend {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
