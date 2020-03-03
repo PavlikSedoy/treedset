@@ -1,0 +1,44 @@
+.digital-code {
+  font-weight: 500;
+  line-height: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__desc {
+    font-size: 18px;
+  }
+
+  span {
+    color: $dfActiveStateColor;
+  }
+
+  &__code {
+    display: flex;
+    margin-top: 50px;
+
+    & > div {
+      margin: 0 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__resend {
+    margin-top: 50px;
+    margin-bottom: auto;
+    color: $signGrayColor;
+    font-weight: 500;
+    line-height: 19px;
+
+    &-link {
+      color: $dfColor;
+    }
+  }
+}

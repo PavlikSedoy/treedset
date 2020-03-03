@@ -24,7 +24,7 @@ const phoneFormat = phoneNumber => {
     } else if ( i == 1 ) {
       res = res + " " + number.substring(0,3);
       number = number.substring(3) 
-    } else if ( i == 2 ) {
+    } else if ( i >= 2 ) {
       res = res + " " + number.substring(0,4);
       number = number.substring(4) 
     }

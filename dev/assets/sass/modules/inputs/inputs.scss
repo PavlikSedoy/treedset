@@ -84,6 +84,17 @@ $dfInputErrorColor: #FF0141;
     transform: translateY(-50%);
     right: 22px;
   }
+
+  // Digital code
+
+  &__code {
+    width: 50px;
+
+    input {
+      padding: 0;
+      text-align: center;
+    }
+  }
 }
 
 // Phone code

@@ -7,6 +7,7 @@
 @import "container/container";
 @import "pages/pages";
 @import "sign-page/sign-page";
+@import "digital-code/digital-code";
 
 // Media by height
 @media screen and (max-height: 700px) {
@@ -28,4 +29,5 @@
   @import "sign-form/sign-form-to-320";
   @import "inputs/inputs-to-320";
   @import "buttons/buttons-to-320";
+  @import "digital-code/digital-code-to-320";
 }

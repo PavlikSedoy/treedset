@@ -2,7 +2,11 @@
   margin-top: 10px;
   min-height: auto;
 
-  &__form {
+  &__form, &__digital-code {
     margin-top: 40px;
+  }
+
+  &__digital-code {
+    height: 340px;
   }
 }

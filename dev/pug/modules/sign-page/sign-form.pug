@@ -28,6 +28,19 @@ else if signType == 'up'
   if step == 'first'
     - var phoneNumber = ''
     - var buttonStatus = ''
+  else if step == 'second'
+    - var phoneNumber = '45 567 6758'
+    - var buttonStatus = 'active'
+  else if step == 'third'
+    - var phoneNumber = '45 567 675867'
+    - var buttonStatus = ''
+    - var inputError = 'error'
+    - var phoneErrorMessage = 'Enter correct phone number'
+  else if step == 'fourth'
+    - var phoneNumber = '45 567 6758'
+    - var buttonStatus = ''
+    - var inputError = 'error'
+    - var phoneErrorMessage = 'This phone number already in use or blocked'
 else if signType == 'forgot'
   if step == 'first'
     - var phoneNumber = ''
@@ -131,7 +144,24 @@ else if signType == 'up'
               span.phone-code__current-code +972
               .phone-code__current-arrow
                 include ../../../assets/images/svg/arrow-down.svg
-        span.input-group__error-msg Your phone number does not match
+        span.input-group__error-msg= phoneErrorMessage
       
     //- End inputs block
     button(class="btn btn__type_first sign-form__btn " + buttonStatus) SIGN UP
+else if signType == 'digital-code'
+  .digital-code.sign-control-wr__digital-code
+    p.digital-code__desc Enter the 4 digit code sent to your mobile<br> number <span>+972 45 567 6758</span>
+    .digital-code__code
+      .input-group.input-group__code
+          input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1', required)
+      .input-group.input-group__code
+          input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1',required)
+      .input-group.input-group__code
+          input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1',required)
+      .input-group.input-group__code
+          input.phone-input(type="text", inputmode="numeric", pattern="\d*", maxlength='1',required)
+    p.digital-code__resend You did not receive a code?
+      a.digital-code__resend-link(href='/')  Resend
+
+    //- End inputs block
+    button(class="btn btn__type_first sign-form__btn " + buttonStatus) CONTINUE

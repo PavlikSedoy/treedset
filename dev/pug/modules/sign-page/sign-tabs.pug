@@ -2,6 +2,8 @@ if signType == 'in'
   - var signStatus = ''
 else if signType == 'up'
   - var signStatus = ' signup-active'
+else if signType == 'digital-code'
+  - var signStatus = ' signup-active'
 
 #signTabs(class="sign-tabs" + signStatus)
   a.sign-tabs__link(href='/signin.html', onmouseover="handleLogTabHover()", onmouseout="handleLogTabOut()") Sign in

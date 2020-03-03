@@ -1,0 +1,11 @@
+extends template/main
+
+block variables
+	- var title = 'Treedset Sign up'
+	- var pageClass = 'sign-page'
+	- var signType = 'up'
+	- var step = 'fourth'
+
+block content
+	include ./modules/sign-page/sign-page__logo-side
+	include ./modules/sign-page/sign-page__form-side
