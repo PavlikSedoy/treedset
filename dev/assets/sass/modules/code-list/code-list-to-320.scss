@@ -1,0 +1,15 @@
+.code-list {
+    &__item {
+        font-size: 13px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    &__flag {
+        height: 15px;
+
+        svg {
+            max-height: 100%;
+        }
+    }
+}

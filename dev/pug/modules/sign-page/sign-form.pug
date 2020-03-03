@@ -122,19 +122,80 @@ if signType == 'in'
         label(for="signinPhone") Phone number
         .input-group__input-wr.phone
           input#signinPhone.phone-input(type="text", inputmode="tel", placeholder="Enter your phone number", value= `${phoneNumber}`, required)
-          .input-group__phone-code.phone-code
+          .input-group__phone-code.phone-code#phoneCode(onclick="toggleCountriesCode()")
             .phone-code__current
               .phone-code__current-flag
                 include ../../../assets/images/svg/flags/israel-flag.svg
               span.phone-code__current-code +972
               .phone-code__current-arrow
                 include ../../../assets/images/svg/arrow-down.svg
+        .sign-form__code-list.code-list#codeList
+          .second-input-group.code-list__input-group
+            input(placeholder="Search")
+            .second-input-group__icon-search
+              include ../../../assets/images/svg/search.svg
+          .code-list__list
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
+            .code-list__item
+              .code-list__flag
+                include ../../../assets/images/svg/flags/israel-flag.svg
+              span.code-list__code +972
+              span.code-list__country Israel
         span.input-group__error-msg Enter correct phone number
       //- Input
       div(class="input-group sign-form__input " + inputError)
         label(for="signinPassword") Password
         .input-group__input-wr.password
-          div(class="input-group__hide-password " + passwordClass)
+          div(class="input-group__hide-password " + passwordClass, onclick="showPassword(this)")
             .hide-password__show-icon
               include ../../../assets/images/svg/show-password.svg
             .hide-password__hide-icon

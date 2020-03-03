@@ -83,6 +83,10 @@ $dfInputErrorColor: #FF0141;
     top: 50%;
     transform: translateY(-50%);
     right: 22px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   // Digital code
@@ -94,6 +98,25 @@ $dfInputErrorColor: #FF0141;
       padding: 0;
       text-align: center;
       font-size: 24px;
+    }
+  }
+}
+
+.second-input-group {
+  position: relative;
+
+  input {
+    height: 40px;
+    background: #F7F8FB;
+    box-shadow: none;
+  }
+
+  &__icon {
+    &-search {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
     }
   }
 }
@@ -187,7 +210,7 @@ $dfInputErrorColor: #FF0141;
     }
     
     & ~ input {
-      font-size: 40px;
+      // font-size: 40px;
 
       @include placeholder {
         font-size: 16px;

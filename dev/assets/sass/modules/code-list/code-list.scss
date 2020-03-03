@@ -1,0 +1,44 @@
+.code-list {
+    @include cubic-first;
+    background: $white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px #DBE2EB;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__input-group {
+        margin: 20px;
+    }
+
+    &__list {
+        overflow-y: scroll;
+        height: calc(40vh - 80px);
+        @include scrollbars(3px, $dfActiveStateColor, $white);
+        margin-right: 10px;
+    }
+
+    &__item {
+        @include cubic-first;
+        padding: 15px 0 15px 20px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+            color: $dfActiveStateColor;
+        }
+    }
+
+    &__code {
+        margin-left: 12px;
+    }
+
+    &__country {
+        margin-left: 20px;
+    }
+}

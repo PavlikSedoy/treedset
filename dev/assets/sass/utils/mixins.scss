@@ -27,6 +27,7 @@
   }
 }
 $z-indexes: (
+  "dropdown",
   "content"
 );
 
@@ -49,4 +50,27 @@ $z-indexes: (
 
 @mixin cubic-first($delay: 0) {
   transition: .5s cubic-bezier(.42,1.03,.22,1) #{$delay}s;
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
 }
