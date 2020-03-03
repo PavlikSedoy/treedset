@@ -27,6 +27,14 @@
     &.check {
       height: calc(100vh - 400px);
     }
+
+    &.reg {
+      height: calc(100vh - 140px);
+
+      .sign-heading {
+        min-height: 80px;
+      }
+    }
   }
   
   // Logo side
@@ -58,6 +66,20 @@
     margin-bottom: auto;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  // Finish reg
+  &__finish-reg-info {
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  &__fifnish-reg-desc {
+    font-size: 18px;
+    line-height: 26px;
+    color: $signGrayColor;
+    margin-bottom: auto;
+    margin-top: 60px;
   }
 }
 // End sign page

@@ -79,4 +79,10 @@
     font-size: 13px;
     line-height: 18px;
   }
+
+  &__custom-check {
+    svg {
+      width: 11px;
+    }
+  }
 }

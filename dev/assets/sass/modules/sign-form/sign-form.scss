@@ -22,6 +22,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &-reg {
+      margin-bottom: 35px;
+    }
   }
 
   &__forgot {
@@ -42,5 +46,10 @@
   &__sign-instruction {
     font-weight: 500;
     font-size: 18px;
+  }
+
+  // Label on reg page
+  &__reg-label {
+    align-items: flex-start;
   }
 }

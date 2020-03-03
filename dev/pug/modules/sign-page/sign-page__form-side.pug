@@ -1,5 +1,9 @@
 if signType == 'check'
   - var containerClass = ' check'
+else if signType == 'finish-reg'
+  - var containerClass = ' check'
+else if signType == 'reg'
+  - var containerClass = ' reg'
 else
   - var containerClass = ''
 
@@ -10,6 +14,11 @@ else
     
     if signType == 'check'
       p.sign-page__check-info We have send on your email <b>sarahconer@gmail.com</b> new password
+
+      a.btn.btn__type_first.sign-form__btn.active(href="/signin.html") SIGN IN
+    else if signType == 'finish-reg'
+      p.sign-page__finish-reg-info You have successfully registered!
+      p.sign-page__fifnish-reg-desc Thank you for registering. We have sent you addittional information to your inbox
 
       a.btn.btn__type_first.sign-form__btn.active(href="/signin.html") SIGN IN
     else

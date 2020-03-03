@@ -44,5 +44,11 @@
   &__container {
     min-height: calc(100vh - 130px);
     justify-content: center;
+
+    &.reg {
+      .sign-heading {
+        min-height: 0;
+      }
+    }
   }
 }

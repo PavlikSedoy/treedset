@@ -88,6 +88,29 @@ else if signType == 'digital-code'
     - var digitalError = ''
     - var digitalErrorMsg = 'You have used all attempts to register. Try again after a while'
     - var buttonStatus = 'active'
+else if signType == 'reg'
+  if step == 'first'
+    - var regName = ''
+    - var regPassword = ''
+    - var regLastName = ''
+    - var regEmail = ''
+    - var buttonStatus = ''
+    - var inputError = ''
+  if step == 'second'
+    - var regName = 'Sarah'
+    - var regPassword = '12345678'
+    - var regLastName = 'Corner'
+    - var regEmail = 'sarahconer@gmail.com'
+    - var buttonStatus = 'active'
+    - var inputError = ''
+  if step == 'third'
+    - var regName = ''
+    - var regPassword = ''
+    - var regLastName = ''
+    - var regEmail = ''
+    - var buttonStatus = ''
+    - var inputError = 'error'
+
 
 
 if signType == 'in'
@@ -200,3 +223,50 @@ else if signType == 'digital-code'
 
     //- End inputs block
     button(class="btn btn__type_first sign-form__btn " + buttonStatus) CONTINUE
+else if signType == 'reg'
+  form.sign-form.sign-control-wr__form.sign-control-wr__form-reg.sign-form__reg-type(action="/")
+    //- Inputs block
+    .sign-form__inputs
+      //- Input
+      div(class="input-group sign-form__input " + inputError)
+        label(for="regName") First name
+        .input-group__input-wr
+          input#regName.phone-input(type="text", placeholder="Enter your first name", value= `${regName}`, required)
+        span.input-group__error-msg Field can not be empty
+      //- Input
+      div(class="input-group sign-form__input " + inputError)
+        label(for="regLastName") Last name
+        .input-group__input-wr
+          input#regLastName.phone-input(type="text", placeholder="Enter your last name", value=regLastName, required)
+        span.input-group__error-msg Field can not be empty
+      //- Input
+      div(class="input-group sign-form__input " + inputError)
+        label(for="regEmail") Email
+        .input-group__input-wr
+          input#regEmail.phone-input(type="text", placeholder="Enter your email", value=regEmail, required)
+        span.input-group__error-msg Enter correct email
+      //- Input
+      div(class="input-group sign-form__input " + inputError)
+        label(for="regPassword") Password
+        .input-group__input-wr.password
+          div(class="input-group__hide-password " + passwordClass)
+            .hide-password__show-icon
+              include ../../../assets/images/svg/show-password.svg
+            .hide-password__hide-icon
+              include ../../../assets/images/svg/hide-password.svg
+          input#regPassword(type=passwordInputType, placeholder="Enter your password", value=regPassword, required)
+        span.input-group__error-msg Password can not be shorter then 8 characters
+
+      //- Remeber? and forgot password
+      .sign-form__options.sign-form__options-reg
+        //- Check
+        .df-inline-check.sign-form__reg-label
+          .df-inline-check__check-wr
+            input#signinRemember(type="checkbox", name="signinRemember", checked)
+            .df-inline-check__custom-check
+              include ../../../assets/images/svg/check.svg
+          label(for="signinRemember") I agree to Treedset’s <a href="/">Terms of Service</a><br> and  <a href="/">Privacy Policy</a>
+        //- End check
+      
+      //- End inputs block
+      button(class="btn btn__type_first sign-form__btn " + buttonStatus) SIGN IN
